@@ -17,4 +17,8 @@ class WidgetConnectionTime extends Model
     ];
     use HasFactory;
     public $timestamps = false;
+
+    public function widget() {
+        return $this->hasMany(Widget::class, 'idx', 'widget_idx', );
+    }
 }

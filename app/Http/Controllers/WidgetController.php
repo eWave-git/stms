@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\RawData;
 use App\Models\Widget;
+use App\Models\WidgetBoardType;
+use App\Models\WidgetConnectionTime;
 use Illuminate\Http\Request;
 use Config;
 use Carbon\Carbon;
