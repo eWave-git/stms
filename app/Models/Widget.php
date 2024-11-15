@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\WidgetBoardType;
+use App\Models\WidgetConnectionTime;
+
 class Widget extends Model
 {
     use HasFactory;
@@ -30,10 +33,10 @@ class Widget extends Model
     }
 
     public function widgetboardtype() {
-        return $this->hasMany(Widgetboardtype::class, 'widget_idx', 'idx');
+        return $this->hasMany(WidgetBoardType::class, 'widget_idx', 'idx');
     }
 
     public function widgetconnectiontime() {
-        return $this->hasMany(Widgetconnectiontime::class, 'widget_idx', 'idx');
+        return $this->hasMany(WidgetConnectionTime::class, 'widget_idx', 'idx');
     }
 }
