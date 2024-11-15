@@ -29,4 +29,7 @@ class WidgetBoardType extends Model
 
     use HasFactory;
 
+    public function widget() {
+        return $this->hasMany(Widget::class, 'idx', 'widget_idx', );
+    }
 }
